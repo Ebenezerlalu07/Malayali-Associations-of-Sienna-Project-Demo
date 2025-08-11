@@ -1,0 +1,86 @@
+ .hero-banner {
+     background: url('Assets/5.jpg') center center/cover no-repeat;
+     height: 40vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color: white;
+     position: relative;
+ }
+
+ .hero-banner h1 {
+     font-size: 4rem;
+     font-weight: 700;
+     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+ }
+
+ @media (max-width: 768px) {
+     .hero-banner {
+         height: 20vh;
+     }
+
+     .hero-banner h1 {
+         font-size: 2.5rem;
+     }
+ }
+
+
+ .section-heading {
+     font-size: 2.5rem;
+     font-weight: 700;
+     color: #1e6757;
+ }
+
+ .tab-card {
+     border-radius: 12px;
+     color: white;
+     padding: 2rem;
+     background-size: cover;
+     background-position: center;
+     height: 100%;
+     position: relative;
+     transition: transform 0.3s ease;
+ }
+
+ .tab-card:hover {
+     transform: translateY(-5px);
+ }
+
+ .tab-title {
+     font-size: 1.75rem;
+     font-weight: 600;
+     margin-bottom: 1rem;
+ }
+
+ .arrow-icon {
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+     background: white;
+     color: #1e6757;
+     border-radius: 50%;
+     padding: 10px;
+     font-size: 1.2rem;
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     line-height: 20px;
+ }
+
+ @media (max-width: 767px) {
+     .section-heading {
+         font-size: 1.8rem;
+         text-align: center;
+     }
+ }
+
+
+
+ .carousel-img {
+     border-radius: 1rem;
+     max-height: 500px;
+     object-fit: cover;
+     width: 100%;
+ }

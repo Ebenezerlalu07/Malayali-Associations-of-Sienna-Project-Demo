@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malayali Association of Sienna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css">
+
+    <style>
+        /* Adjust spacing due to fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('Assets/Banner.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            padding: 8px 16px;
+            /* Reduced from 12px 20px */
+            font-size: 0.95rem;
+            /* Reduced from 1.1rem */
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 170px;
+            /* Reduced max width */
+            min-height: 30px;
+            /* Reduced from 52px */
+        }
+
+
+        .green-btn {
+            background-color: #198754;
+            color: white;
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #333;
+        }
+
+        .circle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        .white-btn .circle-icon {
+            background-color: #198754;
+            color: white;
+        }
+
+        .green-btn:hover {
+            background-color: #157347;
+        }
+
+        .white-btn:hover .circle-icon {
+            background-color: #157347;
+            color: white;
+        }
+
+        .down-arrow {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+
+        /* About Section */
+        .about-wrapper {
+            background: linear-gradient(to bottom, #ffffff 20%, #198754 20%);
+            padding: 0;
+        }
+
+        .about-content {
+            background-color: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .about-btn {
+            background-color: #198754;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background-color: #157347;
+            color: white;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Mas Logo Sienna bg.png" alt="MAS Logo" width="100" />
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link  " href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-banner fade-in-section">
+        <h1>Our Events</h1>
+    </section><br><br>
+    <section class="onam-registration">
+        <center>
+            <script defer type="text/javascript" id="embed-oveit-hub" src="https://oveit.com/hub/embed-script-hub.js"
+                data-oveit-hub-link="https://oveit.com/hub/event/onam-2025-03mPMBzD/buy-tickets?language=en"></script>
+        </center>
+    </section><br>
+
+
+    <section class="py-5 container  fade-in-section">
+        <h2 class="fw-bold mb-3 sf">Spotlight On Events</h2>
+        <p class="mb-4">
+            Welcome to the <strong>Malayali</strong> Association of Sienna. We are a Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer
+        </p>
+
+        <div class="row g-4  fade-in-section">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 1.png" class="card-img-top rounded-top"
+                        alt="Delicious restaurant at Hanalei Bay" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Delicious restaurant at Hanalei Bay</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 2.png" class="card-img-top rounded-top"
+                        alt="Top 10 most beautiful check-in spots in Ph" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 10 most beautiful check-in spots in Ph ...</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 3.png" class="card-img-top rounded-top"
+                        alt="Top 5 newest services at Navagio Beach" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 5 newest services at Navagio Beach</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 4.png" class="card-img-top rounded-top"
+                        alt="Top 5 newest services at Navagio Beach" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 5 newest services at Navagio Beach</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards below as needed -->
+        </div>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 5.png" class="card-img-top rounded-top"
+                        alt="Delicious restaurant at Hanalei Bay" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Delicious restaurant at Hanalei Bay</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 6.png" class="card-img-top rounded-top"
+                        alt="Top 10 most beautiful check-in spots in Ph" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 10 most beautiful check-in spots in Ph ...</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam 7.png" class="card-img-top rounded-top"
+                        alt="Top 5 newest services at Navagio Beach" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 5 newest services at Navagio Beach</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card shadow-sm rounded-3">
+                    <img src="/Assets/Onam  8.png" class="card-img-top rounded-top"
+                        alt="Top 5 newest services at Navagio Beach" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2 text-muted small">
+                            <i class="bi bi-calendar-event me-2"></i> February 20, 2024
+                        </div>
+                        <h5 class="card-title fw-bold">Top 5 newest services at Navagio Beach</h5>
+                        <p class="card-text text-muted small">
+                            Lorem Ipsum is simply dummy text of the printing and typeset industry. Lorem Ipsum has been
+                            lorem ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards below as needed -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer class="bg-success text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 gy-md-0">
+                <!-- Logo & Description -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-between mb-3 mb-md-0">
+                    <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 120px; height: auto;"
+                        class="mb-3" />
+                    <p class="mb-0 small">
+                        <strong>Lorem Ipsum</strong> is simply dummy text of the printing <br> and typesetting industry.
+                        Lorem Ipsum has been.
+                    </p>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">About us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Gallery</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Terms Of Use</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Our Events</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+15142658485" class="text-white text-decoration-none d-block mb-2">+1 514 265
+                                8485</a></li>
+                        <li><a href="mailto:mas@gmail.com"
+                                class="text-white text-decoration-none d-block mb-2">mas@gmail.com</a></li>
+                        <li class="d-flex gap-3 fs-5 mt-3">
+                            <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="text-white" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light mt-4" />
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+                <small class="mb-2 mb-md-0">© Malayali Association of Sienna</small>
+                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
+                    <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show loader before page unload (link click)
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                const target = link.getAttribute("target");
+                const href = link.getAttribute("href");
+
+                // Open only if it's not a hash, and same tab
+                if (href && !href.startsWith("#") && target !== "_blank") {
+                    document.getElementById("page-loader").style.opacity = "1";
+                    document.getElementById("page-loader").style.visibility = "visible";
+                }
+            });
+        });
+
+        // Hide loader after page fully loads
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+    <script>
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(section => {
+            appearOnScroll.observe(section);
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

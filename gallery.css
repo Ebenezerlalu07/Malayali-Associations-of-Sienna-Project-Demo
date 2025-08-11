@@ -1,0 +1,215 @@
+ .hero-banner {
+     background: url('Assets/9.jpg') center center/cover no-repeat;
+     height: 40vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color: white;
+     position: relative;
+ }
+
+ .hero-banner h1 {
+     font-size: 4rem;
+     font-weight: 700;
+     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+ }
+
+ @media (max-width: 768px) {
+     .hero-banner {
+         height: 20vh;
+     }
+
+     .hero-banner h1 {
+         font-size: 2.5rem;
+     }
+ }
+
+
+
+
+
+
+
+
+ .tab-container {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .tab-scroll {
+     display: flex;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+     gap: 8px;
+     padding: 8px 50px 8px 8px;
+     /* right padding for buttons */
+ }
+
+ .tab-scroll::-webkit-scrollbar {
+     display: none;
+ }
+
+ .nav-tabs {
+     border: none;
+     flex-wrap: nowrap;
+ }
+
+ .nav-tabs .nav-link {
+     border: none;
+     background-color: #e9ecef;
+     color: #000;
+     border-radius: 20px;
+     padding: 8px 16px;
+     white-space: nowrap;
+     font-weight: 500;
+ }
+
+ .nav-tabs .nav-link.active {
+     background-color: #198754;
+     color: #fff !important;
+ }
+
+ .scroll-buttons {
+     position: absolute;
+     top: 50%;
+     right: 8px;
+     transform: translateY(-50%);
+     display: flex;
+     gap: 6px;
+     z-index: 1;
+ }
+
+ .scroll-btn {
+     border: none;
+     border-radius: 50%;
+     width: 32px;
+     height: 32px;
+     background-color: #dee2e6;
+     font-size: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+ }
+
+ .gallery-img {
+     width: 100%;
+     height: 220px;
+     object-fit: cover;
+     border-radius: 12px;
+ }
+
+ @media (max-width: 576px) {
+     .gallery-img {
+         height: 140px;
+     }
+ }
+
+
+
+
+
+
+ /* Add gap around entire container */
+ .container {
+     margin: 40px auto;
+ }
+
+ /* Tabs wrapper */
+ .event-tabs-wrapper {
+     display: flex;
+     align-items: center;
+     background: #eee;
+     border-radius: 50px;
+     margin-bottom: 30px;
+ }
+
+ /* Scrollable tabs container */
+ .event-tabs {
+     display: flex;
+     overflow-x: auto;
+     scrollbar-width: none;
+     /* Firefox */
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     flex-grow: 1;
+ }
+
+ .event-tabs::-webkit-scrollbar {
+     display: none;
+     /* Chrome, Safari */
+ }
+
+ /* Individual tabs */
+ .event-tab {
+     padding: 8px 20px;
+     border-radius: 50px;
+     border: 1px solid transparent;
+     background: transparent;
+     margin-right: 10px;
+     white-space: nowrap;
+     cursor: pointer;
+     transition: all 1s ease;
+     user-select: none;
+     font-weight: 500;
+     color: #000;
+ }
+
+ .event-tab:hover {
+     background: #d9f1d4;
+ }
+
+ .event-tab.active {
+     background: #198754;
+     color: white;
+
+
+
+ }
+
+ /* Arrow buttons */
+ .arrow-btn {
+     border: none;
+     background-color: #198754;
+     color: white;
+     border-radius: 50%;
+     width: 36px;
+     height: 36px;
+     font-size: 20px;
+     margin-left: 8px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     user-select: none;
+     transition: background-color 0.2s ease;
+ }
+
+ .arrow-btn:hover {
+     background-color: #198754;
+ }
+
+ /* Gallery images */
+ .gallery-img {
+     width: 100%;
+     height: 220px;
+     object-fit: cover;
+     border-radius: 12px;
+     box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+     cursor: pointer;
+     transition: transform 1s ease;
+ }
+
+ .gallery-img:hover {
+     transform: scale(1.05);
+ }
+
+ /* Hide images that are not active */
+ .gallery-item {
+     display: none;
+ }
+
+ .gallery-item.active {
+     display: block;
+ }

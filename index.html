@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malayali Association of Sienna</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Adjust spacing due to fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+        /* Hero Section */
+        .hero-section {
+            background: url('Assets/Banner.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            padding: 8px 16px;
+            /* Reduced from 12px 20px */
+            font-size: 0.95rem;
+            /* Reduced from 1.1rem */
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 170px;
+            /* Reduced max width */
+            min-height: 30px;
+            /* Reduced from 52px */
+        }
+
+
+        .green-btn {
+            background-color: #198754;
+            color: white;
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #333;
+        }
+
+        .circle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        .white-btn .circle-icon {
+            background-color: #198754;
+            color: white;
+        }
+
+        .green-btn:hover {
+            background-color: #157347;
+        }
+
+        .white-btn:hover .circle-icon {
+            background-color: #157347;
+            color: white;
+        }
+
+        .down-arrow {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+
+        /* About Section */
+        .about-wrapper {
+            background: linear-gradient(to bottom, #ffffff 20%, #198754 20%);
+            padding: 0;
+        }
+
+        .about-content {
+            background-color: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .about-btn {
+            background-color: #198754;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background-color: #157347;
+            color: white;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+        }
+
+        #animated-text {
+            display: inline-block;
+            transition: opacity 2s linear;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Mas Logo Sienna bg.png" alt="MAS Logo" width="100" />
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link  " href="/about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section fade-in-section">
+        <div class="container-fluid">
+            <h1>Welcome to <span class="mallu" id="animated-text">Malayali</span><br />Association of Sienna</h1>
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+                <a href="membership.html" class="hero-btn green-btn">
+                    Join us
+                    <span class="circle-icon">
+                        <img src="Assets/Arrow green.png" alt="Arrow" class="icon-img" />
+                    </span>
+                </a>
+                <a href="" class="hero-btn white-btn">
+                    Events
+                    <span class="circle-icon">
+                        <img src="Assets/Arrow white.png" alt="Arrow" class="icon-img" />
+                    </span>
+                </a>
+            </div>
+            <p class="mt-4">
+                Our vision at the Malayali Association of Sienna (MAS) is to build a vibrant, connected, and<br>
+                compassionate community where the culture of Kerala thrives...
+            </p>
+            <div class="down-arrow">
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+
+    <!-- ABOUT US SECTION -->
+    <section class="bg-white fade-in-section"
+        style="background: linear-gradient(to bottom, #fff 20%, #198754 20%); padding: 60px 0;">
+        <div class="container bg-white rounded p-4">
+            <div class="row align-items-center g-4">
+                <!-- Text Column -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3 sf">About us</h2>
+                    <p>Established in 2025 in Missouri City, Houston, the Malayali Association of Sienna (MAS) was
+                        formed to unite the local Malayali community and celebrate the rich cultural traditions of
+                        Kerala. MAS serves as a vibrant platform to preserve and promote Kerala’s heritage while
+                        nurturing a strong sense of identity and belonging among its members.</p>
+                    <p>Through a wide range of cultural, social, and educational events, MAS creates opportunities for
+                        families and future generations to stay connected to their roots. The association is committed
+                        to fostering inclusivity, unity, and cultural pride within the Sienna and the greater Houston
+                        area.</p>
+                    <a href="#" class="hero-btn green-btn">
+                        Read More
+                        <span class="circle-icon">
+                            <img src="Assets/Arrow green.png" alt="Arrow" class="icon-img" />
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Images Column -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <img src="Assets/3.1.jpg" alt="Image 1" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column gap-3">
+                            <img src="Assets/13.jpg" alt="Image 2" class="img-fluid rounded">
+                            <img src="Assets/7.jpg" alt="Image 3" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT EVENTS SECTION -->
+    <section class="py-5 fade-in-section">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold sf">Our Recent Events</h3>
+                <div>
+                    <button id="prevBtn" class="btn btn-success rounded-circle me-2"><i
+                            class="bi bi-arrow-left"></i></button>
+                    <button id="nextBtn" class="btn btn-success rounded-circle"><i
+                            class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="overflow-hidden">
+                <div id="cardsRow" class="row g-4 flex-nowrap" style="transition: transform 0.5s ease;">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 1.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>February 20,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Delicious restaurant at Hanalei Bay</h5>
+                                <p class="text-muted small">Lorem Ipsum is simply dummy text of the printing and typeset
+                                    industry...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 2.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>February 20,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Top 10 most beautiful check-in spots in Ph...</h5>
+                                <p class="text-muted small">Lorem Ipsum is simply dummy text of the printing and typeset
+                                    industry...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 3.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>February 20,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Top 5 newest services at Navagio Beach</h5>
+                                <p class="text-muted small">Lorem Ipsum is simply dummy text of the printing and typeset
+                                    industry...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 4.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>February 20,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Top 5 newest services at Navagio Beach</h5>
+                                <p class="text-muted small">Lorem Ipsum is simply dummy text of the printing and typeset
+                                    industry...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 (New) -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 1.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>March 15,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Cultural Festival Highlights</h5>
+                                <p class="text-muted small">A beautiful celebration of traditions and performances...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 (New) -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 2.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>April 10,
+                                    2024</small>
+                                <h5 class="mt-2 fw-semibold">Community Outreach Program</h5>
+                                <p class="text-muted small">Engaging the community through volunteer work...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 (New) -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 3.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>May 5, 2024</small>
+                                <h5 class="mt-2 fw-semibold">Traditional Dance Workshop</h5>
+                                <p class="text-muted small">Learn and experience the rich dance forms of Kerala...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 (New) -->
+                    <div class="col-md-6 col-lg-4 col-xl-3 flex-shrink-0">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="Assets/Card 4.png" class="card-img-top rounded-top" alt="Event">
+                            <div class="card-body">
+                                <small class="text-muted"><i class="bi bi-calendar-event me-2"></i>June 20, 2024</small>
+                                <h5 class="mt-2 fw-semibold">Food Festival Extravaganza</h5>
+                                <p class="text-muted small">Celebrate the tastes and flavors of Kerala cuisine...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Text and Read More -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+                <p class="mb-2 mb-md-0 text-muted small">
+                    Be captivated by the latest images from the Malayali Association of Sienna. Take a peek at their
+                    media portfolio to see for yourself.
+                </p>
+                <a href="#" class="hero-btn green-btn">
+                    Read More
+                    <span class="circle-icon">
+                        <img src="Assets/Arrow green.png" alt="Arrow" class="icon-img" />
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="hero fade-in-section">
+        <div class="container">
+            <!-- Heading -->
+            <h1>EXPLORE SIENNA</h1>
+
+            <!-- Content Row -->
+            <div class="content-row">
+                <!-- Text and Button -->
+                <div class="text-section">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <a href="#" class="hero-btn green-btn">
+                        Read More
+                        <span class="circle-icon">
+                            <img src="Assets/Arrow green.png" alt="Arrow" class="icon-img" />
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="image-grid">
+                    <div class="image-card">
+                        <img src="/Assets/9.jpg" alt="Azure Haven" />
+                        Azure Haven
+                    </div>
+                    <div class="image-card">
+                        <img src="/Assets/2.jpg" alt="Serene Sanctuary" />
+                        Serene Sanctuary
+                    </div>
+                    <div class="image-card">
+                        <img src="/Assets/3.1.jpg" alt="Verdant Vista" />
+                        Verdant Vista
+                    </div>
+                    <div class="image-card">
+                        <img src="/Assets/5.jpg" alt="Verdant Vista" />
+                        Verdant Vista
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white fade-in-section">
+        <div class="container">
+            <h2 class="section-title sf mb-3">Executive Committee</h2>
+            <p class="section-subtitle">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+
+            <div class="row g-4 mt-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/Assets/Sophia.png" class="card-img-top" alt="Sophia Mathew">
+                        <div class="card-body">
+                            <h5 class="card-title">SOPHIA MATHEW</h5>
+                            <p class="card-subtitle">President</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/Assets/Joji.png" class="card-img-top" alt="Joji George">
+                        <div class="card-body">
+                            <h5 class="card-title">JOJI GEORGE</h5>
+                            <p class="card-subtitle">General Secretary</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="/Assets/Jann.png" class="card-img-top" alt="Jan Merry">
+                        <div class="card-body">
+                            <h5 class="card-title">JAN MERRY</h5>
+                            <p class="card-subtitle">Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container my-5">
+        <div class="newsletter-section">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Subscribe to our newsletter!</h2>
+                    <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <form class="newsletter-form d-flex align-items-center" onsubmit="handleMailto(event)">
+                        <input type="email" id="emailInput" class="form-control me-2" placeholder="Email" required />
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleMailto(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            const subject = encodeURIComponent('Newsletter Subscription');
+            const body = encodeURIComponent(`Hi,\n\nI would like to subscribe to your newsletter.\n\nEmail: ${email}`);
+            window.location.href = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+    <footer class="bg-success text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 gy-md-0">
+                <!-- Logo & Description -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-between mb-3 mb-md-0">
+                    <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 120px; height: auto;"
+                        class="mb-3" />
+                    <p class="mb-0 small">
+                        <strong>Lorem Ipsum</strong> is simply dummy text of the printing <br> and typesetting industry.
+                        Lorem Ipsum has been.
+                    </p>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">About us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Gallery</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Terms Of Use</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Our Events</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+15142658485" class="text-white text-decoration-none d-block mb-2">+1 514 265
+                                8485</a></li>
+                        <li><a href="mailto:mas@gmail.com"
+                                class="text-white text-decoration-none d-block mb-2">mas@gmail.com</a></li>
+                        <li class="d-flex gap-3 fs-5 mt-3">
+                            <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="text-white" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light mt-4" />
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+                <small class="mb-2 mb-md-0">© Malayali Association of Sienna</small>
+                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
+                    <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script>
+        const cardsRow = document.getElementById('cardsRow');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        const totalCards = cardsRow.children.length;
+        const cardsPerPage = 4;
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            // Calculate translateX percentage
+            // Each card is 25% width (4 cards per page)
+            const translateXPercent = -(currentIndex * 100);
+            cardsRow.style.transform = `translateX(${translateXPercent}%)`;
+
+            // Disable prev if at start
+            prevBtn.disabled = currentIndex === 0;
+            // Disable next if at last page
+            nextBtn.disabled = currentIndex >= Math.ceil(totalCards / cardsPerPage) - 1;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < Math.ceil(totalCards / cardsPerPage) - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        // Initialize
+        updateCarousel();
+    </script>
+
+
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show loader before page unload (link click)
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                const target = link.getAttribute("target");
+                const href = link.getAttribute("href");
+
+                // Open only if it's not a hash, and same tab
+                if (href && !href.startsWith("#") && target !== "_blank") {
+                    document.getElementById("page-loader").style.opacity = "1";
+                    document.getElementById("page-loader").style.visibility = "visible";
+                }
+            });
+        });
+
+        // Hide loader after page fully loads
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(section => {
+            appearOnScroll.observe(section);
+        });
+    </script>
+
+    <script>
+        const animatedText = document.getElementById('animated-text');
+        const texts = ['Malayali', 'മലയാളി'];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % texts.length;
+            animatedText.style.opacity = 0;
+            setTimeout(() => {
+                animatedText.textContent = texts[index];
+                animatedText.style.opacity = 2;
+            }, 1000); // time for fade out before switch
+        }, 3000); // interval between changes
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
