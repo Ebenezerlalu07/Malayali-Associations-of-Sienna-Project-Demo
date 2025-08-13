@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malayali Association of Sienna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="corecommittee.css">
+
+    <style>
+        /* Adjust spacing due to fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('/Assets//SIENNA\ CLUB.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            padding: 8px 16px;
+            /* Reduced from 12px 20px */
+            font-size: 0.95rem;
+            /* Reduced from 1.1rem */
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 170px;
+            /* Reduced max width */
+            min-height: 30px;
+            /* Reduced from 52px */
+        }
+
+
+        .green-btn {
+            background-color: #198754;
+            color: white;
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #333;
+        }
+
+        .circle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        .white-btn .circle-icon {
+            background-color: #198754;
+            color: white;
+        }
+
+        .green-btn:hover {
+            background-color: #157347;
+        }
+
+        .white-btn:hover .circle-icon {
+            background-color: #157347;
+            color: white;
+        }
+
+        .down-arrow {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+
+        /* About Section */
+        .about-wrapper {
+            background: linear-gradient(to bottom, #ffffff 20%, #198754 20%);
+            padding: 0;
+        }
+
+        .about-content {
+            background-color: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .about-btn {
+            background-color: #198754;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background-color: #157347;
+            color: white;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Mas Logo Sienna bg.png" alt="MAS Logo" width="100" />
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link  active" href="corecommittee.html">Core Committe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-banner fade-in-section">
+        <h1>Core Committee Members</h1>
+    </section>
+
+
+    <div class="container py-4">
+        <div class="row">
+
+            <!-- Profile 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Anish Joseph.jpg" alt="Anish Joseph" class="profile-img">
+                    <div class="profile-name">Anish Joseph</div>
+                </div>
+            </div>
+
+            <!-- Profile 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Alice Thomas.jpg" alt="Alice Thomas" class="profile-img">
+                    <div class="profile-name">Alice Thomas</div>
+                </div>
+            </div>
+
+            <!-- Profile 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Sunoj Skariah.jpeg" alt="Sunoj Skariah" class="profile-img">
+                    <div class="profile-name">Sunoj Skariah</div>
+                </div>
+            </div>
+
+            <!-- Profile 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/John Valiyamannil.jpg" alt="John Valiyamannil" class="profile-img">
+                    <div class="profile-name">John Valiyamannil</div>
+                </div>
+            </div>
+
+            <!-- Profile 5 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Alexander John.jpg" alt="Alexander John" class="profile-img">
+                    <div class="profile-name">Alexander John</div>
+                </div>
+            </div>
+
+            <!-- Profile 6 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Anitha Madhu.jpg" alt="Anitha Madhu" class="profile-img">
+                    <div class="profile-name">Anitha Madhu</div>
+                </div>
+            </div>
+
+            <!-- Profile 7 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Anu Raj.jpg" alt="Anu Raj" class="profile-img">
+                    <div class="profile-name">Anu Raj</div>
+                </div>
+            </div>
+
+            <!-- Profile 8 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Bejoy Thomas.jpg" alt="Bejoy Thomas" class="profile-img">
+                    <div class="profile-name">Bejoy Thomas</div>
+                </div>
+            </div>
+            <!-- Profile 9 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Biju Sivan.jpeg" alt="Biju Sivan" class="profile-img">
+                    <div class="profile-name">Biju Sivan</div>
+                </div>
+            </div>
+            <!-- Profile 10 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Binu Alex.jpg" alt="Binu Alex" class="profile-img">
+                    <div class="profile-name">Binu Alex</div>
+                </div>
+            </div>
+            <!-- Profile 11 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Denny John.jpg" alt="Denny John" class="profile-img">
+                    <div class="profile-name">Denny John</div>
+                </div>
+            </div>
+            <!-- Profile 12 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Dhanisha Sam.jpg" alt="Dhanisha Sam" class="profile-img">
+                    <div class="profile-name">Dhanisha Sam</div>
+                </div>
+            </div>
+            <!-- Profile 13 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Felix Xavier.jpeg" alt="Felix Xavier" class="profile-img">
+                    <div class="profile-name">Felix Xavier</div>
+                </div>
+            </div>
+            <!-- Profile 14 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/John Emmanual.jpeg" alt="John Emmanual" class="profile-img">
+                    <div class="profile-name">John Emmanual</div>
+                </div>
+            </div>
+            <!-- Profile 15 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Jolly Myalil.jpg" alt="Jolly Myalil" class="profile-img">
+                    <div class="profile-name">Jolly Myalil</div>
+                </div>
+            </div>
+            <!-- Profile 16 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Jose Abraham.jpeg" alt="Jose Abraham" class="profile-img">
+                    <div class="profile-name">Jose Abraham</div>
+                </div>
+            </div>
+            <!-- Profile 17 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Jose Nedumackal.jpeg" alt="Jose Nedumackal" class="profile-img">
+                    <div class="profile-name">Jose Nedumackal</div>
+                </div>
+            </div>
+            <!-- Profile 18 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Joseph Abraham.jpg" alt="Joseph Abraham" class="profile-img">
+                    <div class="profile-name">Joseph Abraham</div>
+                </div>
+            </div>
+            <!-- Profile 19 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Joy Puthry.jpg" alt="Joy Puthry" class="profile-img">
+                    <div class="profile-name">Joy Puthry</div>
+                </div>
+            </div>
+            <!-- Profile 20 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Lathish Krishnan.jpg" alt="Lathish Krishnan" class="profile-img">
+                    <div class="profile-name">Lathish Krishnan</div>
+                </div>
+            </div>
+            <!-- Profile 21 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Lijesh Lonappan.jpg" alt="Lijesh Lonappan" class="profile-img">
+                    <div class="profile-name">Lijesh Lonappan</div>
+                </div>
+            </div>
+            <!-- Profile 22 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Mathew Samuel.jpg" alt="Mathew Samuel" class="profile-img">
+                    <div class="profile-name">Mathew Samuel</div>
+                </div>
+            </div>
+            <!-- Profile 23 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Monish Joshy.jpg" alt="Monish Joshy" class="profile-img">
+                    <div class="profile-name">Monish Joshy</div>
+                </div>
+            </div>
+            <!-- Profile 24 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Philip Pathiyil.jpg" alt="Philip Pathiyil" class="profile-img">
+                    <div class="profile-name">Philip Pathiyil</div>
+                </div>
+            </div>
+            <!-- Profile 25 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Rege Kuttothara.jpg" alt="Rege Kuttothara" class="profile-img">
+                    <div class="profile-name">Rege Kuttothara</div>
+                </div>
+            </div>
+            <!-- Profile 26 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Rema Pillai.jpg" alt="Rema Pillai" class="profile-img">
+                    <div class="profile-name">Rema Pillai</div>
+                </div>
+            </div>
+            <!-- Profile 27 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Renjith Kumar.jpeg" alt="Renjith Kumar" class="profile-img">
+                    <div class="profile-name">Renjith Kumar</div>
+                </div>
+            </div>
+            <!-- Profile 28 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Rijosh George.jpg" alt="Rijosh George" class="profile-img">
+                    <div class="profile-name">Rijosh George</div>
+                </div>
+            </div>
+            <!-- Profile 29 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Sherin Thomas.jpg" alt="Rijosh George" class="profile-img">
+                    <div class="profile-name">Sherin Thomas</div>
+                </div>
+            </div>
+            <!-- Profile 30 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Shijimon Jacob.jpg" alt="Shijimon Jacob" class="profile-img">
+                    <div class="profile-name">Shijimon Jacob</div>
+                </div>
+
+            </div>
+            <!-- Profile 31 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Shiju Kurian.jpg" alt="Shiju Kurian" class="profile-img">
+                    <div class="profile-name">Shiju Kurian</div>
+                </div>
+
+            </div>
+            <!-- Profile 32 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Simi Joseph.jpg" alt="Simi Joseph" class="profile-img">
+                    <div class="profile-name">Simi Joseph</div>
+                </div>
+
+            </div>
+            <!-- Profile 33 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Sivakumar Ullatil.jpg" alt="Sivakumar Ullatil" class="profile-img">
+                    <div class="profile-name">Sivakumar Ullatil</div>
+                </div>
+
+            </div>
+            <!-- Profile 34 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Sreejith Sreedharan.jpg" alt="Sreejith Sreedharan" class="profile-img">
+                    <div class="profile-name">Sreejith Sreedharan</div>
+                </div>
+
+            </div>
+            <!-- Profile 35 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Thomas Koratty.jpeg" alt="Thomas Koratty" class="profile-img">
+                    <div class="profile-name">Thomas Koratty</div>
+                </div>
+
+            </div>
+            <!-- Profile 36 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Tomychen Thomas.jpg" alt="Tomychen Thomas" class="profile-img">
+                    <div class="profile-name">Tomychen Thomas</div>
+                </div>
+
+            </div>
+            <!-- Profile 37 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Balu Zachariah.jpg" alt="Balu Zachariah" class="profile-img">
+                    <div class="profile-name">Balu Zachariah</div>
+                </div>
+
+            </div>
+            <!-- Profile 38 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Arun Mathew.jpg" alt="Arun Mathew" class="profile-img">
+                    <div class="profile-name">Arun Mathew</div>
+                </div>
+
+            </div>
+            <!-- Profile 39 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/George  Philip.jpg" alt="George  Philip" class="profile-img">
+                    <div class="profile-name">George  Philip</div>
+                </div>
+
+            </div>
+            <!-- Profile 40 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="profile-card">
+                    <img src="/Assets/Binoy Joseph.jpeg" alt="Binoy Joseph" class="profile-img">
+                    <div class="profile-name">Binoy Joseph</div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer class="bg-success text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 gy-md-0">
+                <!-- Logo & Description -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-between mb-3 mb-md-0">
+                    <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 120px; height: auto;"
+                        class="mb-3" />
+                    <p class="mb-0 small">
+                        <strong>Lorem Ipsum</strong> is simply dummy text of the printing<br> and typesetting industry.
+                        Lorem Ipsum has been.
+                    </p>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">About us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Gallery</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Terms Of Use</a></li>
+                    </ul>
+                </div>
+
+                <!-- Events Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Our Events</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none d-block mb-2">Lorem Ipsum</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-6 col-md-2">
+                    <h6 class="fw-bold sf mb-3">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+15142658485" class="text-white text-decoration-none d-block mb-2">+1 514 265
+                                8485</a></li>
+                        <li><a href="mailto:mas@gmail.com"
+                                class="text-white text-decoration-none d-block mb-2">mas@gmail.com</a></li>
+                        <li class="d-flex gap-3 fs-5 mt-3">
+                            <a href="#" class="text-white" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="text-white" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light mt-4" />
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+                <small class="mb-2 mb-md-0">© Malayali Association of Sienna</small>
+                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
+                    <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show loader before page unload (link click)
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                const target = link.getAttribute("target");
+                const href = link.getAttribute("href");
+
+                // Open only if it's not a hash, and same tab
+                if (href && !href.startsWith("#") && target !== "_blank") {
+                    document.getElementById("page-loader").style.opacity = "1";
+                    document.getElementById("page-loader").style.visibility = "visible";
+                }
+            });
+        });
+
+        // Hide loader after page fully loads
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+    <script>
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(section => {
+            appearOnScroll.observe(section);
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
