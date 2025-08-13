@@ -1,5 +1,5 @@
  .hero-banner {
-     background: url('Assets/5.jpg') center center/cover no-repeat;
+     background: url('Assets/11.jpg') center center/cover no-repeat;
      height: 40vh;
      display: flex;
      align-items: center;
@@ -84,3 +84,5 @@
      object-fit: cover;
      width: 100%;
  }
+
+ 
