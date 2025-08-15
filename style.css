@@ -59,7 +59,7 @@ html {
 }
 
 .fade-in-section {
-   opacity: 0;
+   opacity: 1;
    transform: translateY(30px);
    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
    will-change: opacity, transform;
@@ -250,7 +250,7 @@ html {
 
 
 .hero {
-   background: url('Assets/bg.png') center center/cover no-repeat;
+   background: url('Assets/PARADIGM\ COVE\ STALLIONS.jpeg') center center/cover no-repeat;
    min-height: 65vh;
    display: flex;
    flex-direction: column;
