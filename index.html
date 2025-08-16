@@ -18,61 +18,70 @@
         }
 
         /* Hero Section */
-        /* .hero-section {
-            background: url('Assets/Banner.png') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        } */
-
-
-
-
         .hero-section {
             position: relative;
+            width: 100%;
+            height: 70vh;
+            /* default desktop height */
             color: white;
             text-align: center;
             padding: 100px 20px;
             overflow: hidden;
-            /* Ensures no video overflow */
         }
 
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200vw;
+            /* zoomed for desktop */
+            height: 120vh;
+            /* taller to avoid gaps */
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
 
+        .video-background iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+        }
 
-
-
-
-
+        /* Hero text */
         .hero-section h1 {
             font-size: 4rem;
             font-weight: 800;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-section p {
             font-size: 1.1rem;
             margin-top: 30px;
+            position: relative;
+            z-index: 1;
         }
 
-
+        /* Buttons */
         .hero-btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-radius: 50px;
             padding: 8px 16px;
-            /* Reduced from 12px 20px */
             font-size: 0.95rem;
-            /* Reduced from 1.1rem */
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s ease;
             width: 100%;
             max-width: 170px;
-            /* Reduced max width */
             min-height: 30px;
-            /* Reduced from 52px */
+            z-index: 1;
+            position: relative;
         }
-
 
         .green-btn {
             background-color: #198754;
@@ -114,6 +123,8 @@
             animation: bounce 2s infinite;
             color: white;
             margin-top: 40px;
+            position: relative;
+            z-index: 1;
         }
 
         @keyframes bounce {
@@ -128,65 +139,43 @@
             }
         }
 
+        /* Mobile & Tablet */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                height: 60vh;
+                /* better fit tablet */
+            }
 
+            .video-background {
+                width: 220vw;
+                /* more zoom to avoid gaps */
+                height: 120vh;
+            }
 
-        /* About Section */
-        .about-wrapper {
-            background: linear-gradient(to bottom, #ffffff 20%, #198754 20%);
-            padding: 0;
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
         }
 
-        .about-content {
-            background-color: white;
-            padding: 60px 40px;
-            border-radius: 10px;
-            max-width: 1600px;
-            margin: 0 auto;
-        }
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 60vh;
+                /* keep big height */
+            }
 
-        .about-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
+            .video-background {
+                width: 250vw;
+                /* extra zoom to cover top & bottom */
+                height: 150vh;
+                /* taller to eliminate blank space */
+            }
 
-        .about-btn {
-            background-color: #198754;
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            border-radius: 30px;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s ease;
-        }
-
-        .about-btn:hover {
-            background-color: #157347;
-            color: white;
-        }
-
-        .about-img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-        }
-
-        @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2rem;
             }
-
-            .about-title {
-                font-size: 2rem;
-            }
-        }
-
-        #animated-text {
-            display: inline-block;
-            transition: opacity 2s linear;
         }
     </style>
+
 </head>
 
 <body>
@@ -220,22 +209,17 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section position-relative" style="height: 70vh; overflow: hidden;">
-
-        <!-- Fullscreen YouTube Video Background -->
-        <div class="video-background position-absolute top-0 start-50 translate-middle-x z-0"
-            style="width: 110vw; height: 110vh; overflow: hidden;">
+    <section class="hero-section position-relative">
+        <!-- YouTube Background Video -->
+        <div class="video-background">
             <iframe
-                src="https://www.youtube.com/embed/7LbE-MQjVtY?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&loop=1&playlist=7LbE-MQjVtY"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen aria-hidden="true"
-                class="position-absolute top-0 start-0 w-100 h-100"
-                style="pointer-events: none; transform: scale(1.1); object-fit: cover; border: none;">
+                src="https://www.youtube.com/embed/7LbE-MQjVtY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=7LbE-MQjVtY"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen aria-hidden="true">
             </iframe>
         </div>
 
-
         <!-- Foreground Content -->
-        <div class="container-fluid text-white text-center position-relative z-1">
+        <div class="container-fluid text-white text-center position-relative z-1 hero-content">
             <h1>
                 Welcome to <span class="mallu" id="animated-text">Malayali</span><br />
                 Association of Sienna
@@ -261,9 +245,7 @@
                 <i class="bi bi-chevron-down"></i>
             </div>
         </div>
-
     </section>
-
 
 
 
