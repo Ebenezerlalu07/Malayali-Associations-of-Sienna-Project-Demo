@@ -1,5 +1,5 @@
  .hero-banner {
-     background: url('/Assets/SIENNA\ GOLF\ CLUB.jpg') center center/cover no-repeat;
+     background: url('/Assets/Drone\ 3.1.jpg') center center/cover no-repeat;
      height: 40vh;
      display: flex;
      align-items: center;
@@ -38,7 +38,7 @@
 
  .profile-img {
      width: 100%;
-     height: 250px;
+     height: 400px;
      object-fit: cover;
  }
 

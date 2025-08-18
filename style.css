@@ -50,6 +50,8 @@ h6 {
    font-weight: 700;
 }
 
+
+
 p {
    font-size: medium;
 }
@@ -250,7 +252,7 @@ html {
 
 
 .hero {
-   background: url('Assets/4.jpg') center center/cover no-repeat;
+   background: url('Assets/Drone\ 2\ dark.jpg') center center/cover no-repeat;
    min-height: 65vh;
    display: flex;
    flex-direction: column;
@@ -404,7 +406,7 @@ html {
 }
 
 .card-img-top {
-   height: 350px;
+   height: 400px;
    object-fit: cover;
 }
 
