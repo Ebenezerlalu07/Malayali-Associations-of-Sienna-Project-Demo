@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malayali Association of Sienna</title>
+    <link rel="icon" type="image/x-icon" href="/Assets/Mas Logo Sienna bg.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="privacy.css">
+
+    <style>
+        /* Adjust spacing due to fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('Assets/Banner.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+
+        .hero-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            padding: 8px 16px;
+            /* Reduced from 12px 20px */
+            font-size: 0.95rem;
+            /* Reduced from 1.1rem */
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 170px;
+            /* Reduced max width */
+            min-height: 30px;
+            /* Reduced from 52px */
+        }
+
+
+        .green-btn {
+            background-color: #198754;
+            color: white;
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #333;
+        }
+
+        .circle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: white;
+            flex-shrink: 0;
+        }
+
+        .white-btn .circle-icon {
+            background-color: #198754;
+            color: white;
+        }
+
+        .green-btn:hover {
+            background-color: #157347;
+        }
+
+        .white-btn:hover .circle-icon {
+            background-color: #157347;
+            color: white;
+        }
+
+        .down-arrow {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+
+        /* About Section */
+        .about-wrapper {
+            background: linear-gradient(to bottom, #ffffff 20%, #198754 20%);
+            padding: 0;
+        }
+
+        .about-content {
+            background-color: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .about-btn {
+            background-color: #198754;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .about-btn:hover {
+            background-color: #157347;
+            color: white;
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Mas Logo Sienna bg.png" alt="MAS Logo" width="100" />
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corecommittee.html">Core Committe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link  " href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-banner fade-in-section">
+        <h1>Privacy Policy</h1>
+    </section><br>
+
+
+    <div class="container py-0 fade-in-section">
+        <h2 class="mb-3 sf">Privacy Policy Effectiveness</h2>
+        <p class="mb-4">
+            This Privacy Policy shall apply only to individual consumers and solely to information collected by this
+            Website. This Privacy Policy is effective as of January 1, 2025 (“Effective Date”) and applies to personal
+            and financial information submitted on this Website on or after the Effective Date.
+        </p>
+        <h2 class="mb-3 sf">Our Commitment to Privacy</h2>
+        <p class="mb-4">
+            Your privacy is very important to Johnson Development, as well as to our respective subsidiaries and
+            affiliates (collectively, "we," "us" or "our") and we are all committed to treating your personal
+            information responsibly. To better protect your privacy, we provide this notice explaining our online
+            information gathering and dissemination practices and the choices you can make about the collection and use
+            of the personal information you submit on this Website on which this Privacy Policy is posted. Use of this
+            Website constitutes your consent to our collection and use of personal data in accordance with the terms
+            hereof. We endeavor to maintain appropriate procedures and safeguards to protect the confidentiality of
+            personal information we collect from visitors to this Website. Personal information collected is accessible
+            only by designated staff or agents of our organization who are also bound to this statement, except as
+            expressly described below. However, it is important to recognize that "perfect security" does not exist on
+            the Internet. Therefore, while we endeavor to maintain appropriate physical and electronic procedures and
+            safeguards to protect information collected from this Website, we cannot guarantee the confidentiality of
+            any information that you disclose online and transmit to us, and you understand that you do so at your own
+            risk.
+        </p>
+        <h2 class="mb-3 sf">Personal Information that We May Collect</h2>
+        <p class="mb-4">
+            We will not collect any personally identifiable information about you through this Website unless you
+            provide it to us voluntarily, with the exception of your computer's IP address. The information we collect
+            will vary depending on how you use this Website. On some pages, you can register or request to receive
+            materials, announcements and other information from us or from others. The types of personal information
+            collected may include, without limitation, your name and contact information (such as your postal address,
+            zip code, phone number or e-mail address), your gender, the number and/or ages of members of your household
+            or business, information about the type of properties you are interested in and other general information
+            relating to product preferences, personal interests, household income or areas of interest on our
+            Website.<br><br>
+
+            We do not collect or maintain information from those actually known to be under the age of 18. We will not
+            contact children under age 18 without a parent's permission. In addition to the information provided by
+            Website visitors, our computers automatically receive and record information from your Internet browser,
+            including your IP address, cookie information, and the pages you request (see "Cookies and Other Tracking
+            Methods").
+        </p>
+        <h2 class="mb-3 sf">How We Use and Disclose Your Information</h2>
+        <p class="mb-4">
+            We use information you provide on an aggregated basis to do such things as operate our site, enhance our
+            site, and to better understand the profile of our online audience. We may also use this data, both aggregate
+            and personal to you, to enhance your site experience on our site by displaying content and marketing
+            messages that we believe will be of interest to you. In some cases we use your personal information to
+            contact you or to provide information to you, such as to send newsletters or text messages to you that you
+            request. We may provide your information to third parties such as homebuilders and service and product
+            providers to enable them to follow-up with you on your requests. We may also use your information for market
+            research purposes, for project planning or for developing prospect lists for our existing and future
+            communities involving Johnson Development or other affiliates within the Johnson Development communities. In
+            doing so, we may reproduce, publish, broadcast or post such information to third parties assisting with our
+            planning.
+        </p>
+        <h2 class="mb-3 sf">Information Sharing and Disclosure</h2>
+        <p class="mb-4">
+            We do not sell or rent your personal information or share your personal information with other people or
+            nonaffiliated companies, except with your permission or as described above, or under the following limited
+            circumstances:<br><br>
+
+            We may need to share the information or send the information to partners who work on our behalf under
+            confidentiality agreements in order to provide the information, product or services you have requested or to
+            help us communicate with you about offers (provided that these companies do not have any independent rights
+            to use the personally identifiable information we provide to them beyond what is necessary to assist us,
+            unless they have your consent to do so).<br><br>
+
+            We may share aggregated, non-personally identifiable information about our users with homebuilders and
+            service and product providers for marketing and promotional purposes.<br><br>
+
+            We may store and disclose personal information as allowed or required by applicable law, including making
+            disclosures in order to respond to subpoenas, court orders, or legal process.<br><br>
+
+            We may establish or exercise our legal rights or defend against legal claims as necessary or advisable to
+            protect the rights, safety or property of our communities or others and to conform to legal or regulatory
+            requirements.<br><br>
+
+            We believe it is necessary to share information in order to investigate, prevent, or take action regarding
+            illegal activities, suspected fraud, situations involving potential threats to the physical safety of any
+            person, violations of the Website terms of use, or as otherwise required by law.<br><br>
+            We transfer information about you if this company is acquired by or merged with another company.<br><br>
+
+            Third parties (hackers) may unlawfully intercept or access information or confidential transmissions.</p>
+        <h2 class="mb-3 sf">Links</h2>
+        <p class="mb-4">
+            This Website may contain links to third-party Websites for homebuilders, retailers, service providers and
+            others, which are provided solely as a convenience to viewers and not as an endorsement of the contents of
+            such sites. While we endeavor to only provide links to Websites maintained by reputable organizations, you
+            should be aware that these third parties might be able to gather information from and about you if you visit
+            their Websites. In these cases, those third parties will use such information in accordance with their own
+            privacy policies, which may differ substantially from our policy. We assume no liability for the privacy
+            practices of such other sites and are not responsible for the availability or content of, any off-site pages
+            or any other sites linked to our Website. Your linking to off-site pages or other sites is at your own risk.
+        </p>
+        <h2 class="mb-3 sf">Cookies and Other Tracking Methods</h2>
+        <p class="mb-4">
+            “Cookies” are small pieces of information stored on your computer. We may use cookies or, in a limited
+            number of cases IP addresses, for a number of reasons. Cookies allow us to better understand how users use
+            our site and can help us to tailor our Website or a marketing message to better match your needs and
+            interests. Cookies can also help you remember your username and password on protected areas of Websites. You
+            are always free to decline our cookies and continue to use our Website if the tools in your browser permits,
+            but some parts of our site may not work properly or as efficiently if you do.<br><br>
+
+            In order to better provide information to you, our Website employs a customer relationship management (CRM)
+            system, which collects and processes personal data about Users via cookies, clear gifs (a.k.a. Web Beacons)
+            and voluntarily shared information to gauge the effectiveness of certain communications. We tie the
+            information gathered by clear gifs in emails to our customers' Personal Information. The CRM leverages
+            artificial intelligence (AI) to enhance the capabilities of its platform and provide users with advanced
+            tools for marketing, sales, customer service, and more. You may follow the steps noted below to correct your
+            personal information or opt-out at any time.<br><br>
+
+            Additionally, our Website uses advertising services, in which third-party vendors, including but not limited
+            to Google and Meta, show our ads on sites across the Internet. We and third-party vendors, including Google,
+            use first-party cookies (from our Website) and third-party cookies (such as the DoubleClick cookie) or web
+            beacons together to inform, optimize, and serve ads based on your past visits to our Website. You can
+            opt-out of having your site activity available to Google Analytics by installing the Google Analytics
+            opt-out browser add-on. To learn more about Google uses information from our Website, visit
+            <a
+                href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a><br><br>
+
+            Most advertising networks offer you a way to opt out of targeted advertising. If you would like to find out
+            more information, please visit <a href="https://optout.aboutads.info/"> http://www.aboutads.info/choices/
+            </a>or <a href="https://www.youronlinechoices.com/">http://www.youronlinechoices.com.</a> You
+            may opt out by clicking here: <a href="https://optout.aboutads.info/">http://optout.aboutads.info/</a> or
+            <a href="https://optout.networkadvertising.org/?c=1">http://optout.networkadvertising.org/ </a> (or if
+            located in the European Union, by clicking here: <a href="https://youronlinechoices.eu/">
+                http://www.youronlinechoices.eu/).</a> Please note this does
+            not opt you out of being served advertising. You will continue to receive generic advertisements.
+        </p>
+        <h2 class="mb-3 sf">Correction of Personal Information; Opt-Out Right</h2>
+        <p class="mb-4">
+            We make every effort to keep your information current and accurate. Accordingly, we ask that you notify us
+            in the manner described below of any changes to your personal information.<br><br>
+
+            You may at any time request to be removed from our email list by clicking the unsubscribe link in any email
+            you receive from us. Alternatively, you may notify us via e-mail, telephone or postal mail at the address
+            shown in the last section of this Privacy Policy. In the event you elect not to receive any future contacts
+            from us, we will endeavor to remove your name from our email list within 10 business days.
+        </p>
+        <h2 class="mb-3 sf">Notification of Changes in Privacy Policy or Use of Information Collected</h2>
+        <p class="mb-4">
+            This Privacy Policy may be updated and modified from time to time by us in our sole discretion. If we decide
+            to change our Privacy Policy or if we make any material changes in our privacy practices that affect user
+            information already collected through our site, we will post a notice of those changes on our Homepage. We
+            will use information in accordance with the Privacy Policy under which the information was collected. If you
+            do not agree to any provision of this Privacy Policy, or any update or modification thereto, please do not
+            use our Website.
+        </p>
+        <h2 class="mb-3 sf">Privacy Rights</h2>
+        <h2 class="mb-3 sf">A. California "Shine the Light" Law</h2>
+        <p class="mb-4">
+            Under California’s “Shine the Light Law” (Cal. Civ. Code Section 1798.83), California residents are entitled
+            to request certain information about our disclosure of personal information to third parties for their
+            direct marketing purposes. You may make such a request by sending an e-mail or letter to the Company’s
+            Privacy Administrator at the address identified below.<br>
+
+            As indicated in Section 1, above, trust is an essential part of our mission, and we take great pride in the
+            relationship of trust that we have built with our customers. In furtherance of our commitment to trust, we
+            have adopted a policy of not selling, renting or sharing your Identifying Information with third parties for
+            direct marketing purposes unless you affirmatively agree to such disclosure (e.g., your request that we send
+            your Identifying Information to neighborhood builders so that they may contact you directly regarding their
+            neighborhoods and products).
+        </p>
+        <h2 class="mb-3 sf">B. California Consumer Privacy Act</h2>
+        <p class="mb-4">
+            Under the California Consumer Privacy Act of 2018 (Cal. Civ. Code Sections 1798.100 to 1798.199) (the
+            “CCPA”), California residents are entitled to certain disclosures about how a business collects, uses and
+            shares personal information. Moreover, the CCPA grants to California residents specific rights regarding
+            their personal information.<br><br>
+
+            We have prepared a separate addendum to this Privacy Policy that pertains solely to California residents and
+            their rights under the CCPA (the “CCPA Addendum”). Please click the following link to access the CCPA
+            Addendum: California Consumer Privacy Act Addendum.<br><br>
+
+            Consistent with the requirements of the CCPA, the CCPA Addendum identifies the categories of “personal
+            information” (as defined in Section 1798.140 of the CCPA) that the Company has collected about consumers in
+            the preceding twelve (12) months. Additionally, the CCPA Addendum addresses the rights of California
+            residents to make certain requests regarding their personal information; specifically:<br><br>
+
+            The right to request that we disclose the specific pieces of personal information that we have collected
+            regarding the California resident (including the source(s) of the personal information, the Company’s
+            business or commercial purpose for collecting the personal information, and the categories of third parties
+            with whom the Company has shared the personal information); and The right to request that we delete any
+            personal information about the California resident which the Company has collected from the California
+            resident.<br><br>
+
+            NOTE: Although the CCPA also includes a “right to opt-out” of the sale of personal information, we do not
+            and will not “sell” (as said term is defined in the CCPA) personal information without the consent of the
+            person who provides the personal information. Accordingly, the right to opt-out (as afforded to California
+            consumers under the CCPA) does not apply.<br><br>
+
+            The CCPA Addendum also discusses (i) the methods that Californians are to follow in connection with the
+            submission of requests and (ii) the Company’s rights and obligations in connection with processing requests
+            received from Californians.<br><br>
+        </p>
+        <h2 class="mb-3 sf">Questions and Suggestions</h2>
+        <p class="mb-4">
+            Contact us<br><br>
+
+            Malayali Association Of Sienna<br>
+            435 Murphy RD B-1 - 348<br>
+            Stafford TX 7747700000<br>
+        </p>
+
+
+    </div>
+
+
+
+
+
+    <footer class="pt-5 pb-4" style="background-color:#198754; color:white;">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Brand / About -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 130px; height: auto;"
+                        class="mb-3">
+                    <p class="small" style="color: #f8f9fa;">
+                        Malayali Association of Sienna (MAS) brings together families to celebrate
+                        culture, unity, and friendship through vibrant events and traditions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3 sf">Sienna</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/about.html" class="text-white text-decoration-none d-block mb-2">About us</a></li>
+                        <li><a href="/membership.html"
+                                class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                        <li><a href="/gallery.html" class="text-white text-decoration-none d-block mb-2">Gallery</a>
+                        </li>
+                        <li><a href="/corecommittee.html"
+                                class="text-white text-decoration-none d-block mb-2">Committee</a></li>
+                        <li><a href="/events.html" class="text-white text-decoration-none d-block mb-2">Events</a></li>
+                        <li><a href="/contact.html" class="text-white text-decoration-none d-block">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Story -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="fw-bold mb-3 sf">Our Story</h6>
+                    <p class="small" style="color: #f8f9fa;">
+                        Founded by Malayali families in Sienna, MAS is a space for preserving heritage,
+                        building friendships, and creating memories for generations to come.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3 sf">Get in Touch</h6>
+                    <ul class="list-unstyled small" style="color: #f8f9fa;">
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+13462423927"
+                                class="text-white text-decoration-none">+1 346 242 3927</a></li>
+                        <li class="mb-3"><i class="bi bi-envelope me-2"></i><a href="mailto:info@siennamalayali.com"
+                                class="text-white text-decoration-none">info@siennamalayali.com</a></li>
+                    </ul>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://www.facebook.com/people/Malayali-Association-of-Sienna/61578309970556/"
+                            class="text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/siennamalayali" class="text-white"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@SiennaMalayaliAssociation" class="text-white"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.3);" class="my-4">
+
+            <!-- Bottom -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-center text-md-start"
+                style="color:#f8f9fa;">
+
+                <!-- Privacy Policy (mobile: top, desktop: right) -->
+                <ul class="list-unstyled d-flex gap-3 mb-2 mb-md-0 order-1 order-md-2">
+                    <li><a href="/privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                </ul>
+
+                <!-- Copyright (mobile: bottom, desktop: left) -->
+                <p class="mb-0 order-2 order-md-1">©2025 Malayali Association of Sienna. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show loader before page unload (link click)
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (e) {
+                const target = link.getAttribute("target");
+                const href = link.getAttribute("href");
+
+                // Open only if it's not a hash, and same tab
+                if (href && !href.startsWith("#") && target !== "_blank") {
+                    document.getElementById("page-loader").style.opacity = "1";
+                    document.getElementById("page-loader").style.visibility = "visible";
+                }
+            });
+        });
+
+        // Hide loader after page fully loads
+        window.addEventListener("load", () => {
+            document.body.classList.add("loaded");
+        });
+    </script>
+    <script>
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(section => {
+            appearOnScroll.observe(section);
+        });
+    </script>
+
+
+</body>
+
+</html>
