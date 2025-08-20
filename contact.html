@@ -251,9 +251,11 @@
             const subject = `Contact from ${name}`;
             const body = `Name: ${name}%0D%0AStreet: ${street}%0D%0ACity: ${city}%0D%0APostcode: ${postcode}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
 
-            window.location.href = `mailto:info@siennamalayali.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            // Open Gmail compose window
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=info@siennamalayali.com&su=${encodeURIComponent(subject)}&body=${body}`, '_blank');
         }
     </script>
+
 
 
 
