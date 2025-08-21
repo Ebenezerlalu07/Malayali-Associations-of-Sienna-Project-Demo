@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="style.css">
 
-
     <style>
         /* Adjust spacing due to fixed navbar */
         body {
             padding-top: 80px;
         }
-
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -582,9 +580,11 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="fw-bold mb-3">Subscribe to our newsletter!</h2>
-                    <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <form class="newsletter-form d-flex align-items-center" onsubmit="handleMailto(event)">
-                        <input type="email" id="emailInput" class="form-control me-2" placeholder="Email" required />
+                    <p class="mb-4">Stay connected with us. Any important updates or information will be shared with you
+                        directly through our newsletter.</p>
+                    <form name="submit-to-google-sheet" class="newsletter-form d-flex align-items-center">
+                        <input type="email" id="emailInput" class="form-control me-2" name="Email" placeholder="Email"
+                            required />
                         <button type="submit" class="btn">Subscribe</button>
                     </form>
                 </div>
@@ -592,17 +592,104 @@
         </div>
     </div>
 
-    <script>
-        function handleMailto(event) {
-            event.preventDefault();
-            const email = document.getElementById('emailInput').value;
-            const subject = encodeURIComponent('Newsletter Subscription');
-            const body = encodeURIComponent(
-                `Hi,\n\nI would like to subscribe to your newsletter.\n\nEmail: ${email}`
-            );
-            window.location.href = `mailto:info@siennamalayali.com?subject=${subject}&body=${body}`;
+    <!-- Popup Message -->
+    <div id="popup-msg" style="
+    display:none;
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#28a745;
+    color:white;
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    z-index:9999;
+    opacity:0;
+    transition: opacity 0.3s ease;">
+        Thank you for subscribing!
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border:6px solid #f3f3f3;
+    border-top:6px solid #28a745;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    animation: spin 1s linear infinite;
+    z-index:10000;">
+    </div>
+
+    <style>
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
+    </style>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHe6PTs3o-e7V-4wCNvn-bgr0kh7VqTIWKshw3_gqweXylm6Kc0veGG_Mmhfc3MDtH_A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const popup = document.getElementById("popup-msg")
+        const loader = document.getElementById("loader")
+
+        function showPopup(message, color = "#28a745") {
+            loader.style.display = "none" // hide loader first
+            popup.innerText = message
+            popup.style.background = color
+            popup.style.display = "block"
+            popup.style.opacity = "1"
+
+            setTimeout(() => {
+                popup.style.opacity = "0"
+                setTimeout(() => {
+                    popup.style.display = "none"
+                }, 500) // fade-out
+            }, 2000) // show 2s
+        }
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            const email = document.getElementById("emailInput").value
+
+            // check if already subscribed
+            if (localStorage.getItem("subscribedEmail") === email) {
+                showPopup("You're already subscribed!", "#dc3545") // red
+                form.reset()
+                return
+            }
+
+            loader.style.display = "block" // show loader before fetch
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    localStorage.setItem("subscribedEmail", email)
+                    showPopup("Thank you for subscribing!", "#28a745") // green
+                    form.reset()
+                })
+                .catch(error => {
+                    console.error('Error!', error.message)
+                    showPopup("Something went wrong. Try again.", "#ffc107") // yellow
+                })
+        })
     </script>
+
+
+
+
+
+
 
 
 

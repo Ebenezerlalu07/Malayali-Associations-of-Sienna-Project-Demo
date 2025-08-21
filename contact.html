@@ -218,8 +218,17 @@
                     <input type="email" id="email" class="form-control" placeholder="E-mail" required />
                     <textarea id="message" class="form-control" rows="3"
                         placeholder="Let’s talk about your message"></textarea>
+
+                    <!-- ✅ Security Question (looks like normal label + input) -->
+                    <div class="my-3">
+                        <label id="captchaQuestion" class="form-label fw-bold"></label>
+                        <input type="number" id="captchaAnswer" class="form-control" placeholder="Your answer"
+                            required />
+                    </div>
+
                     <button type="submit" class="submit-btn mt-2">SUBMIT</button>
                 </form>
+
             </div>
 
             <!-- Map Column (Updated) -->
@@ -249,10 +258,53 @@
             const message = document.getElementById('message').value;
 
             const subject = `Contact from ${name}`;
-            const body = `Name: ${name}%0D%0AStreet: ${street}%0D%0ACity: ${city}%0D%0APostcode: ${postcode}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            const body = `Name: ${name}\nStreet: ${street}\nCity: ${city}\nPostcode: ${postcode}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-            // Open Gmail compose window
-            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=info@siennamalayali.com&su=${encodeURIComponent(subject)}&body=${body}`, '_blank');
+            // ✅ Open Gmail composer in new tab
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=siennamalayali@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailURL, '_blank');
+        }
+    </script>
+
+
+
+    <script>
+        let correctAnswer;
+
+        function generateCaptcha() {
+            const a = Math.floor(Math.random() * 10) + 1;
+            const b = Math.floor(Math.random() * 10) + 1;
+            correctAnswer = a + b;
+            document.getElementById("captchaQuestion").innerText = `Security Check: What is ${a} + ${b}?`;
+        }
+
+        window.onload = generateCaptcha;
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const userAnswer = parseInt(document.getElementById("captchaAnswer").value);
+            if (userAnswer !== correctAnswer) {
+                alert("❌ Incorrect answer. Please try again.");
+                generateCaptcha();
+                return;
+            }
+
+            // Gather form data
+            const name = document.getElementById("name").value;
+            const street = document.getElementById("street").value;
+            const city = document.getElementById("city").value;
+            const postcode = document.getElementById("postcode").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = `Contact from ${name}`;
+            const body = `Name: ${name}\nStreet: ${street}\nCity: ${city}\nPostcode: ${postcode}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+            // ✅ Open Gmail composer directly in new tab — NO app chooser
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=info@siennamalayali.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailURL, '_blank');
         }
     </script>
 
