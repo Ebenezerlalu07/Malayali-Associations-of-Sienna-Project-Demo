@@ -9,61 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Fullscreen Loader */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1050;
-        }
 
-        /* Logo with slow heartbeat animation */
-        #loader img {
-            width: 120px;
-            /* Adjust logo size */
-            height: auto;
-            animation: heartbeat 2.5s infinite;
-            /* slower speed */
-        }
-
-        @keyframes heartbeat {
-            0% {
-                transform: scale(1);
-            }
-
-            14% {
-                transform: scale(1.3);
-            }
-
-            28% {
-                transform: scale(1);
-            }
-
-            42% {
-                transform: scale(1.3);
-            }
-
-            70% {
-                transform: scale(1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Hide loader after page load */
-        body.loaded #loader {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -781,7 +727,83 @@
                     })
             })
         </script>
+        <footer class="pt-5 pb-4" style="background-color:#198754; color:white;">
+            <div class="container">
+                <div class="row gy-5">
 
+                    <!-- Brand / About -->
+                    <div class="col-lg-4 col-md-6 text-center text-md-start">
+                        <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 130px; height: auto;"
+                            class="mb-3">
+                        <p class="small" style="color: #f8f9fa;">
+                            Malayali Association of Sienna (MAS) brings together families to celebrate
+                            culture, unity, and friendship through vibrant events and traditions.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h6 class="fw-bold mb-3 sf">Sienna</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="/about.html" class="text-white text-decoration-none d-block mb-2">About us</a>
+                            </li>
+                            <li><a href="/membership.html"
+                                    class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                            <li><a href="/gallery.html" class="text-white text-decoration-none d-block mb-2">Gallery</a>
+                            </li>
+                            <li><a href="/corecommittee.html"
+                                    class="text-white text-decoration-none d-block mb-2">Committee</a></li>
+                            <li><a href="/events.html" class="text-white text-decoration-none d-block mb-2">Events</a>
+                            </li>
+                            <li><a href="/contact.html" class="text-white text-decoration-none d-block">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Our Story -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <h6 class="fw-bold mb-3 sf">Our Story</h6>
+                        <p class="small" style="color: #f8f9fa;">
+                            Founded by Malayali families in Sienna, MAS is a space for preserving heritage,
+                            building friendships, and creating memories for generations to come.
+                        </p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold mb-3 sf">Get in Touch</h6>
+                        <ul class="list-unstyled small" style="color: #f8f9fa;">
+                            <li class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+13462423927"
+                                    class="text-white text-decoration-none">+1 346 242 3927</a></li>
+                            <li class="mb-3"><i class="bi bi-envelope me-2"></i><a href="mailto:info@siennamalayali.com"
+                                    class="text-white text-decoration-none">info@siennamalayali.com</a></li>
+                        </ul>
+                        <div class="d-flex gap-3 fs-5">
+                            <a href="https://www.facebook.com/people/Malayali-Association-of-Sienna/61578309970556/"
+                                class="text-white"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/siennamalayali" class="text-white"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@SiennaMalayaliAssociation" class="text-white"><i
+                                    class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border-color: rgba(255,255,255,0.3);" class="my-4">
+
+                <!-- Bottom -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-center text-md-start"
+                    style="color:#f8f9fa;">
+
+                    <!-- Privacy Policy (mobile: top, desktop: right) -->
+                    <ul class="list-unstyled d-flex gap-3 mb-2 mb-md-0 order-1 order-md-2">
+                        <li><a href="/privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+
+                    <!-- Copyright (mobile: bottom, desktop: left) -->
+                    <p class="mb-0 order-2 order-md-1">©2025 Malayali Association of Sienna. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
 
 
 
