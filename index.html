@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="style.css">
 
+
     <style>
         /* Adjust spacing due to fixed navbar */
         body {
@@ -224,7 +225,287 @@
 </head>
 
 <body>
+    <style>
+        /* Fullscreen Loader */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            flex-direction: column;
+        }
 
+        /* Logo Image */
+        #loader img {
+            width: 100px;
+            /* Adjust size */
+            height: auto;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Small text below logo */
+        #loader p {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* Logo animation (pulse effect) */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Hide loader after page load */
+        body.loaded #loader {
+            display: none;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Loader with Logo -->
+        <div id="loader">
+            <img src="/Assets/Mas Logo Sienna bg.png" alt="Logo Loading">
+            <p>Loading...</p>
+        </div>
+
+        <!-- Your Website Content -->
+        <div class="content">
+            <h1>Welcome to My Website</h1>
+            <p>This is the main content.</p>
+        </div>
+
+        <script>
+            // Hide loader when page fully loads
+            window.addEventListener("load", function () {
+                document.body.classList.add("loaded");
+            });
+        </script>
+
+
+
+
+
+
+        <footer class="pt-5 pb-4" style="background-color:#198754; color:white;">
+            <div class="container">
+                <div class="row gy-5">
+
+                    <!-- Brand / About -->
+                    <div class="col-lg-4 col-md-6 text-center text-md-start">
+                        <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 130px; height: auto;"
+                            class="mb-3">
+                        <p class="small" style="color: #f8f9fa;">
+                            Malayali Association of Sienna (MAS) brings together families to celebrate
+                            culture, unity, and friendship through vibrant events and traditions.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h6 class="fw-bold mb-3 sf">Sienna</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="/about.html" class="text-white text-decoration-none d-block mb-2">About us</a>
+                            </li>
+                            <li><a href="/membership.html"
+                                    class="text-white text-decoration-none d-block mb-2">Membership</a></li>
+                            <li><a href="/gallery.html" class="text-white text-decoration-none d-block mb-2">Gallery</a>
+                            </li>
+                            <li><a href="/corecommittee.html"
+                                    class="text-white text-decoration-none d-block mb-2">Committee</a></li>
+                            <li><a href="/events.html" class="text-white text-decoration-none d-block mb-2">Events</a>
+                            </li>
+                            <li><a href="/contact.html" class="text-white text-decoration-none d-block">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Our Story -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <h6 class="fw-bold mb-3 sf">Our Story</h6>
+                        <p class="small" style="color: #f8f9fa;">
+                            Founded by Malayali families in Sienna, MAS is a space for preserving heritage,
+                            building friendships, and creating memories for generations to come.
+                        </p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="fw-bold mb-3 sf">Get in Touch</h6>
+                        <ul class="list-unstyled small" style="color: #f8f9fa;">
+                            <li class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+13462423927"
+                                    class="text-white text-decoration-none">+1 346 242 3927</a></li>
+                            <li class="mb-3"><i class="bi bi-envelope me-2"></i><a href="mailto:info@siennamalayali.com"
+                                    class="text-white text-decoration-none">info@siennamalayali.com</a></li>
+                        </ul>
+                        <div class="d-flex gap-3 fs-5">
+                            <a href="https://www.facebook.com/people/Malayali-Association-of-Sienna/61578309970556/"
+                                class="text-white"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/siennamalayali" class="text-white"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/@SiennaMalayaliAssociation" class="text-white"><i
+                                    class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border-color: rgba(255,255,255,0.3);" class="my-4">
+
+                <!-- Bottom -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-center text-md-start"
+                    style="color:#f8f9fa;">
+
+                    <!-- Privacy Policy (mobile: top, desktop: right) -->
+                    <ul class="list-unstyled d-flex gap-3 mb-2 mb-md-0 order-1 order-md-2">
+                        <li><a href="/privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+
+                    <!-- Copyright (mobile: bottom, desktop: left) -->
+                    <p class="mb-0 order-2 order-md-1">©2025 Malayali Association of Sienna. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            const cardsRow = document.getElementById('cardsRow');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            const totalCards = cardsRow.children.length;
+            const cardsPerPage = 4;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                // Calculate translateX percentage
+                // Each card is 25% width (4 cards per page)
+                const translateXPercent = -(currentIndex * 100);
+                cardsRow.style.transform = `translateX(${translateXPercent}%)`;
+
+                // Disable prev if at start
+                prevBtn.disabled = currentIndex === 0;
+                // Disable next if at last page
+                nextBtn.disabled = currentIndex >= Math.ceil(totalCards / cardsPerPage) - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < Math.ceil(totalCards / cardsPerPage) - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            // Initialize
+            updateCarousel();
+        </script>
+
+
+
+        <!-- Bootstrap Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Show loader before page unload (link click)
+            const links = document.querySelectorAll("a");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    const target = link.getAttribute("target");
+                    const href = link.getAttribute("href");
+
+                    // Open only if it's not a hash, and same tab
+                    if (href && !href.startsWith("#") && target !== "_blank") {
+                        document.getElementById("page-loader").style.opacity = "1";
+                        document.getElementById("page-loader").style.visibility = "visible";
+                    }
+                });
+            });
+
+            // Hide loader after page fully loads
+            window.addEventListener("load", () => {
+                document.body.classList.add("loaded");
+            });
+        </script>
+
+
+        <script>
+            const faders = document.querySelectorAll('.fade-in-section');
+
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(section => {
+                appearOnScroll.observe(section);
+            });
+        </script>
+
+        <script>
+            const animatedText = document.getElementById('animated-text');
+            const texts = ['Malayali', 'മലയാളി'];
+            let index = 0;
+
+            setInterval(() => {
+                index = (index + 1) % texts.length;
+                animatedText.style.opacity = 0;
+                setTimeout(() => {
+                    animatedText.textContent = texts[index];
+                    animatedText.style.opacity = 2;
+                }, 100); // time for fade out before switch
+            }, 1500); // interval between changes
+        </script>
+
+
+
+
+
+
+
+    </body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
@@ -643,21 +924,6 @@
         Thank you for subscribing!
     </div>
 
-    <!-- Loader -->
-    <div id="loader" style="
-    display:none;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    border:6px solid #f3f3f3;
-    border-top:6px solid #28a745;
-    border-radius:50%;
-    width:40px;
-    height:40px;
-    animation: spin 1s linear infinite;
-    z-index:10000;">
-    </div>
 
     <style>
         @keyframes spin {
@@ -720,208 +986,5 @@
 
 
 
-
-
-
-
-
-
-    <footer class="pt-5 pb-4" style="background-color:#198754; color:white;">
-        <div class="container">
-            <div class="row gy-5">
-
-                <!-- Brand / About -->
-                <div class="col-lg-4 col-md-6 text-center text-md-start">
-                    <img src="/Assets/Mas Logo Sienna bg.png" alt="MAS Logo" style="max-width: 130px; height: auto;"
-                        class="mb-3">
-                    <p class="small" style="color: #f8f9fa;">
-                        Malayali Association of Sienna (MAS) brings together families to celebrate
-                        culture, unity, and friendship through vibrant events and traditions.
-                    </p>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6 col-6">
-                    <h6 class="fw-bold mb-3 sf">Sienna</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="/about.html" class="text-white text-decoration-none d-block mb-2">About us</a></li>
-                        <li><a href="/membership.html"
-                                class="text-white text-decoration-none d-block mb-2">Membership</a></li>
-                        <li><a href="/gallery.html" class="text-white text-decoration-none d-block mb-2">Gallery</a>
-                        </li>
-                        <li><a href="/corecommittee.html"
-                                class="text-white text-decoration-none d-block mb-2">Committee</a></li>
-                        <li><a href="/events.html" class="text-white text-decoration-none d-block mb-2">Events</a></li>
-                        <li><a href="/contact.html" class="text-white text-decoration-none d-block">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Our Story -->
-                <div class="col-lg-3 col-md-6 col-6">
-                    <h6 class="fw-bold mb-3 sf">Our Story</h6>
-                    <p class="small" style="color: #f8f9fa;">
-                        Founded by Malayali families in Sienna, MAS is a space for preserving heritage,
-                        building friendships, and creating memories for generations to come.
-                    </p>
-                </div>
-
-                <!-- Contact -->
-                <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-bold mb-3 sf">Get in Touch</h6>
-                    <ul class="list-unstyled small" style="color: #f8f9fa;">
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:+13462423927"
-                                class="text-white text-decoration-none">+1 346 242 3927</a></li>
-                        <li class="mb-3"><i class="bi bi-envelope me-2"></i><a href="mailto:info@siennamalayali.com"
-                                class="text-white text-decoration-none">info@siennamalayali.com</a></li>
-                    </ul>
-                    <div class="d-flex gap-3 fs-5">
-                        <a href="https://www.facebook.com/people/Malayali-Association-of-Sienna/61578309970556/"
-                            class="text-white"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/siennamalayali" class="text-white"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="https://www.youtube.com/@SiennaMalayaliAssociation" class="text-white"><i
-                                class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <hr style="border-color: rgba(255,255,255,0.3);" class="my-4">
-
-            <!-- Bottom -->
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-center text-md-start"
-                style="color:#f8f9fa;">
-
-                <!-- Privacy Policy (mobile: top, desktop: right) -->
-                <ul class="list-unstyled d-flex gap-3 mb-2 mb-md-0 order-1 order-md-2">
-                    <li><a href="/privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                </ul>
-
-                <!-- Copyright (mobile: bottom, desktop: left) -->
-                <p class="mb-0 order-2 order-md-1">©2025 Malayali Association of Sienna. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        const cardsRow = document.getElementById('cardsRow');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        const totalCards = cardsRow.children.length;
-        const cardsPerPage = 4;
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            // Calculate translateX percentage
-            // Each card is 25% width (4 cards per page)
-            const translateXPercent = -(currentIndex * 100);
-            cardsRow.style.transform = `translateX(${translateXPercent}%)`;
-
-            // Disable prev if at start
-            prevBtn.disabled = currentIndex === 0;
-            // Disable next if at last page
-            nextBtn.disabled = currentIndex >= Math.ceil(totalCards / cardsPerPage) - 1;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < Math.ceil(totalCards / cardsPerPage) - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        // Initialize
-        updateCarousel();
-    </script>
-
-
-
-    <!-- Bootstrap Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Show loader before page unload (link click)
-        const links = document.querySelectorAll("a");
-
-        links.forEach(link => {
-            link.addEventListener("click", function (e) {
-                const target = link.getAttribute("target");
-                const href = link.getAttribute("href");
-
-                // Open only if it's not a hash, and same tab
-                if (href && !href.startsWith("#") && target !== "_blank") {
-                    document.getElementById("page-loader").style.opacity = "1";
-                    document.getElementById("page-loader").style.visibility = "visible";
-                }
-            });
-        });
-
-        // Hide loader after page fully loads
-        window.addEventListener("load", () => {
-            document.body.classList.add("loaded");
-        });
-    </script>
-
-
-    <script>
-        const faders = document.querySelectorAll('.fade-in-section');
-
-        const appearOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(section => {
-            appearOnScroll.observe(section);
-        });
-    </script>
-
-    <script>
-        const animatedText = document.getElementById('animated-text');
-        const texts = ['Malayali', 'മലയാളി'];
-        let index = 0;
-
-        setInterval(() => {
-            index = (index + 1) % texts.length;
-            animatedText.style.opacity = 0;
-            setTimeout(() => {
-                animatedText.textContent = texts[index];
-                animatedText.style.opacity = 2;
-            }, 100); // time for fade out before switch
-        }, 1500); // interval between changes
-    </script>
-
-
-
-
-
-
-
-</body>
 
 </html>
