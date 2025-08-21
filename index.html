@@ -650,6 +650,38 @@
             </div>
         </div>
 
+
+
+
+        <!-- Loader -->
+        <div id="subscribeLoader" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:50px;
+    height:50px;
+    border:5px solid #f3f3f3;
+    border-top:5px solid #28a745;
+    border-radius:50%;
+    animation: spin 1s linear infinite;
+    z-index:9999;">
+        </div>
+
+        <style>
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+
         <!-- Popup Message -->
         <div id="popup-msg" style="
     display:none;
@@ -668,15 +700,14 @@
             Thank you for subscribing!
         </div>
 
-
         <style>
             @keyframes spin {
                 0% {
-                    transform: translate(-50%, -50%) rotate(0deg);
+                    transform: rotate(0deg);
                 }
 
                 100% {
-                    transform: translate(-50%, -50%) rotate(360deg);
+                    transform: rotate(360deg);
                 }
             }
         </style>
@@ -685,10 +716,10 @@
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwHe6PTs3o-e7V-4wCNvn-bgr0kh7VqTIWKshw3_gqweXylm6Kc0veGG_Mmhfc3MDtH_A/exec'
             const form = document.forms['submit-to-google-sheet']
             const popup = document.getElementById("popup-msg")
-            const loader = document.getElementById("loader")
+            const subscribeLoader = document.getElementById("subscribeLoader") // unique loader
 
             function showPopup(message, color = "#28a745") {
-                loader.style.display = "none" // hide loader first
+                subscribeLoader.style.display = "none" // hide loader first
                 popup.innerText = message
                 popup.style.background = color
                 popup.style.display = "block"
@@ -713,20 +744,23 @@
                     return
                 }
 
-                loader.style.display = "block" // show loader before fetch
+                subscribeLoader.style.display = "block" // show loader before fetch
 
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                     .then(response => {
                         localStorage.setItem("subscribedEmail", email)
-                        showPopup("Thank you for subscribing!", "#28a745") // green
+                        showPopup("Thank you for subscribing!", "#28a745") // green popup
                         form.reset()
                     })
                     .catch(error => {
                         console.error('Error!', error.message)
-                        showPopup("Something went wrong. Try again.", "#ffc107") // yellow
+                        showPopup("Something went wrong. Try again.", "#ffc107") // yellow popup
                     })
             })
         </script>
+
+
+
         <footer class="pt-5 pb-4" style="background-color:#198754; color:white;">
             <div class="container">
                 <div class="row gy-5">
