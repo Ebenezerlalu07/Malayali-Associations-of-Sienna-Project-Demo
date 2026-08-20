@@ -69,7 +69,7 @@
 
     /* -- LAYOUT -- */
     .container {
-      max-width: 1140px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 22px
     }
@@ -2623,6 +2623,296 @@
       </div>
     </div>
   </section>
+
+  <!-- PROMOTIONAL IMAGE -->
+  <section class="promo-image-section section">
+    <div class="container">
+
+      <div class="text-center">
+        <div class="section-tag">Our Sponsors</div>
+        <h2 class="section-title">Featured Sponsors</h2><br>
+
+        <!-- <p class="section-sub">
+          Thank you to our valued sponsors for supporting the Sienna Malayali community.
+        </p> -->
+      </div>
+
+
+      <img src="Assets/Dhanani.jpeg" alt="Sienna Malayali Community" class="promo-image" />
+    </div>
+  </section>
+
+  <!-- SPONSORS CAROUSEL -->
+  <section class="sponsors-carousel-section" id="sponsors">
+    <div class="container">
+
+      <div class="sponsors-slider">
+
+        <div class="sponsors-track">
+
+          <div class="sponsor-slide">
+            <img src="Assets/TWFG.jpeg" alt="Sponsor 1">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/signature.jpeg" alt="Sponsor 2">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/Riverstone.jpeg" alt="Sponsor 3">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/satya.jpeg" alt="Sponsor 4">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/cornerstone.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/perry.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/texas heart.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/st.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/binu alex flyr.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/at.jpeg" alt="Sponsor 5">
+          </div>
+
+          <div class="sponsor-slide">
+            <img src="Assets/floorx.jpeg" alt="Sponsor 5">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- IMAGE MODAL -->
+    <div class="image-modal" id="imageModal">
+      <button class="image-modal-close" aria-label="Close">&times;</button>
+      <img id="modalImage" src="" alt="Full Sponsor Image">
+    </div>
+  </section>
+
+  <style>
+    /* Clickable sponsor images */
+    .sponsor-slide {
+      cursor: pointer;
+    }
+
+    /* IMAGE MODAL */
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .image-modal img {
+      max-width: 95%;
+      max-height: 90vh;
+
+      width: auto;
+      height: auto;
+
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    /* Close Button */
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+
+      width: 45px;
+      height: 45px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: #fff;
+      color: #000;
+
+      font-size: 32px;
+      line-height: 1;
+      cursor: pointer;
+
+      z-index: 10000;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .image-modal {
+        padding: 15px;
+      }
+
+      .image-modal img {
+        max-width: 100%;
+        max-height: 85vh;
+        border-radius: 8px;
+      }
+
+      .image-modal-close {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    /* PROMOTIONAL IMAGE */
+    .promo-image-section {
+      padding: 40px 0;
+    }
+
+    .promo-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    /* SPONSORS CAROUSEL */
+    .sponsors-carousel-section {
+      overflow: hidden;
+    }
+
+    .sponsors-slider {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .sponsors-track {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: sponsorAutoSlide 20s linear infinite;
+    }
+
+    .sponsor-slide {
+      flex: 0 0 360px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .sponsor-slide img {
+      width: 100%;
+      height: 230px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* AUTO SLIDE */
+    @keyframes sponsorAutoSlide {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-50% - 12px));
+      }
+    }
+
+    /* Pause when user hovers */
+    .sponsors-slider:hover .sponsors-track {
+      animation-play-state: paused;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      .sponsors-carousel-section {
+        padding: 60px 0;
+      }
+
+      .sponsor-slide {
+        flex: 0 0 280px;
+      }
+
+      .sponsor-slide img {
+        height: 180px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .sponsors-carousel-section {
+        padding: 50px 0;
+      }
+
+      .sponsor-slide {
+        flex: 0 0 250px;
+      }
+
+      .sponsor-slide img {
+        height: 160px;
+      }
+    }
+  </style>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeButton = document.querySelector(".image-modal-close");
+
+    // Open full image
+    document.querySelectorAll(".sponsor-slide img").forEach((image) => {
+      image.addEventListener("click", function () {
+        modalImage.src = this.src;
+        modalImage.alt = this.alt;
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    // Close button
+    closeButton.addEventListener("click", () => {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    // Close when tapping outside image
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Close with Escape key
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    });
+  </script>
+
 
   <!-- SPONSORSHIP -->
   <section class="sponsor-section section" id="sponsorship">
