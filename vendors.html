@@ -1532,37 +1532,76 @@
     </div>
   </nav>
 
-  <!-- HERO SLIDER -->
   <section class="hero-slider">
 
-    <!-- LOADER -->
     <div class="slider-loader" id="sliderLoader">
       <div class="loader"></div>
     </div>
 
-    <!-- SLIDES -->
-    <div class="slides" id="slidesContainer"></div>
 
-    <!-- CONTENT -->
+    <!-- LEFT SIDE -->
     <div class="hero-content">
-      <div>
-        <h1 id="bannerHeading">Loading...</h1>
+      <div class="hero-content-inner">
+
+        <!-- TOP BADGES -->
+        <div class="hero-badges">
+          <span>👑 Title Sponsors Showcase</span>
+          <span>✔ 50+ Verified Pros</span>
+        </div>
+
+        <!-- HEADING -->
+        <h1 id="banner">
+          Sienna Malayali
+          <span>Business Hub &amp; Directory</span>
+        </h1>
+
+        <!-- DESCRIPTION -->
+        <p class="hero-description">
+          Connecting local families with trusted community-vetted
+          professionals, contractors, realtors, and specialists.
+        </p>
+
       </div>
     </div>
 
-    <!-- SLIDER DOTS -->
-    <div class="slider-dots" id="sliderDots"></div>
+    <!-- RIGHT SLIDER -->
+    <div class="hero-banner">
+      <div class="slider-card">
 
-    <!-- MANUAL ARROWS -->
-    <button class="slider-btn prev" id="prevSlide">
-      ❮
-    </button>
+        <div class="slides" id="slidesContainer"></div>
 
-    <button class="slider-btn next" id="nextSlide">
-      ❯
-    </button>
+        <div class="slider-dots" id="sliderDots"></div>
+
+        <button class="slider-btn prev" id="prevSlide">
+          ❮
+        </button>
+
+        <button class="slider-btn next" id="nextSlide">
+          ❯
+        </button>
+
+      </div>
+    </div>
 
   </section>
+
+  <script>
+    /* Safety: remove loader after page loads */
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        const loader = document.getElementById("sliderLoader");
+
+        if (loader) {
+          loader.style.opacity = "0";
+          loader.style.pointerEvents = "none";
+
+          setTimeout(function () {
+            loader.style.display = "none";
+          }, 500);
+        }
+      }, 1500);
+    });
+  </script>
 
   <style>
     /* =========================
@@ -1640,187 +1679,609 @@
 
     }
 
+    /* =========================================
+   HERO SECTION
+========================================= */
+
     .hero-slider {
       position: relative;
       width: 100%;
-      height: 70vh;
+      min-height: 650px;
+
+      display: flex;
+      align-items: center;
+
       overflow: hidden;
+
+      background:
+        radial-gradient(circle at 30% 40%,
+          rgba(42, 196, 108, 0.08),
+          transparent 40%),
+        #063b2d;
     }
 
-    /* SLIDE */
-    .slide {
+
+    /* DOT BACKGROUND */
+
+    .hero-slider::before {
+      content: "";
+
       position: absolute;
       inset: 0;
 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-image:
+        radial-gradient(rgba(255, 255, 255, 0.08) 1px,
+          transparent 1px);
+
+      background-size: 30px 30px;
+
+      opacity: 0.45;
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================
+   LEFT CONTENT
+========================================= */
+    /* LEFT HERO CONTENT */
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content-inner {
+      width: 80%;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: 7%;
+    }
+
+
+    /* TOP BADGES */
+
+    .hero-badges {
+      display: inline-flex;
+      align-items: center;
+      overflow: hidden;
+
+      margin-bottom: 28px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50px;
+
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-badges span {
+      padding: 10px 24px;
+
+      color: rgba(255, 255, 255, 0.65);
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-badges span:last-child {
+      color: #62dba4;
+
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    /* HEADING */
+
+    .hero-content h1 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(42px, 4.5vw, 68px);
+      font-weight: 800;
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+    }
+
+    .hero-content h1 span {
+      display: block;
+      margin-top: 8px;
+
+      color: #39c98f;
+    }
+
+
+    /* DESCRIPTION */
+
+    .hero-description {
+      max-width: 680px;
+
+      margin-top: 24px;
+
+      color: rgba(255, 255, 255, 0.72);
+
+      font-size: 17px;
+      font-weight: 500;
+
+      line-height: 1.7;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 991px) {
+
+      .hero-content {
+        width: 100%;
+      }
+
+      .hero-content-inner {
+        width: 88%;
+        margin: 0 auto;
+      }
+
+    }
+
+    /* =========================================
+   SEARCH BAR
+========================================= */
+
+    .hero-search {
+      width: 100%;
+      max-width: 520px;
+
+      height: 60px;
+
+      margin-top: 30px;
+
+      padding: 6px;
+
+      display: flex;
+      align-items: center;
+
+      border-radius: 50px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .search-icon {
+      padding: 0 14px 0 18px;
+
+      color: #7c8b88;
+
+      font-size: 25px;
+    }
+
+
+    .hero-search input {
+      width: 100%;
+
+      height: 100%;
+
+      border: none;
+
+      outline: none;
+
+      color: #2d3e39;
+
+      font-size: 15px;
+    }
+
+
+    .hero-search button {
+      height: 100%;
+
+      padding: 0 27px;
+
+      border: none;
+
+      border-radius: 40px;
+
+      background: #07382b;
+
+      color: #ffffff;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      white-space: nowrap;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+    }
+
+
+    .hero-search button:hover {
+      background: #2ac46c;
+    }
+
+
+    /* =========================================
+   RIGHT SIDE
+========================================= */
+
+    .hero-banner {
+      position: relative;
+
+      z-index: 2;
+
+      width: 50%;
+
+      padding-right: 7%;
+
+      display: flex;
+      align-items: center;
+    }
+
+
+    /* OUTER CARD */
+
+    .slider-card {
+      position: relative;
+
+      width: 100%;
+
+      height: 430px;
+
+      padding: 16px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255, 255, 255, 0.07);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* SLIDES AREA */
+
+    .slides {
+      position: relative;
+
+      width: 100%;
+
+      height: 100%;
+
+      overflow: hidden;
+
+      border-radius: 16px;
+
+      background: #154a3a;
+    }
+
+
+    /* KEEP EXISTING JS SLIDES WORKING */
+
+    .slide {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
 
       opacity: 0;
 
-      /* SMOOTH CINEMATIC EFFECT */
-      transform: scale(1.12);
-
-      transition:
-        opacity 1.2s ease,
-        transform 6s ease;
-
-      will-change: transform, opacity;
+      transition: opacity 0.6s ease;
     }
 
-    /* ACTIVE SLIDE */
+
     .slide.active {
       opacity: 1;
-
-      /* SLOW ZOOM-IN EFFECT */
-      transform: scale(1);
     }
 
-    /* OPTIONAL DARK OVERLAY */
-    .slide::after {
-      content: "";
+
+    /* IF USING BACKGROUND IMAGE */
+
+    .slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+
+    /* IF USING IMG */
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+
+    /* =========================================
+   DOTS
+========================================= */
+
+    .slider-dots {
       position: absolute;
-      inset: 0;
 
-      background:
-        linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.15),
-          rgba(0, 0, 0, 0.35));
+      bottom: 25px;
+
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      z-index: 10;
     }
 
-    /* DOTS */
-    .dot {
-      width: 12px;
-      height: 12px;
+
+    .slider-dots button,
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+
+      padding: 0;
+
+      border: none;
+
       border-radius: 50%;
 
       background: rgba(255, 255, 255, 0.45);
 
       cursor: pointer;
 
-      transition:
-        transform 0.35s ease,
-        background 0.35s ease,
-        width 0.35s ease;
-
-      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
     }
 
-    /* ACTIVE DOT */
-    .dot.active {
-      background: white;
 
-      width: 30px;
+    .slider-dots button.active,
+    .slider-dot.active {
+      width: 20px;
 
-      border-radius: 30px;
+      border-radius: 20px;
 
-      transform: translateY(-1px);
-
-
+      background: #36c891;
     }
 
-    /* SLIDER DOTS WRAPPER */
-    .slider-dots {
+
+    /* =========================================
+   ARROWS
+========================================= */
+
+    .slider-btn {
       position: absolute;
 
-      bottom: 25px;
-      left: 50%;
+      top: 50%;
 
-      transform: translateX(-50%);
+      transform: translateY(-50%);
 
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      width: 38px;
+      height: 38px;
 
-      z-index: 10;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-
-      .slide {
-
-        /* MOBILE FULL IMAGE */
-        background-size: contain;
-
-        background-position: center center;
-
-        transform: scale(1.06);
-
-        transition:
-          opacity 1s ease,
-          transform 5s ease;
-      }
-
-      .slide.active {
-        transform: scale(1);
-      }
-
-      .slider-dots {
-        bottom: 16px;
-        gap: 8px;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-      }
-
-      .dot.active {
-        width: 24px;
-      }
-
-    }
-
-    /* HERO CONTENT */
-    .hero-content {
-      position: absolute;
-      inset: 0;
-      z-index: 5;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+      background:
+        rgba(0, 45, 34, 0.65);
+
+      color: #ffffff;
+
+      z-index: 20;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
     }
 
-    .hero-content h1 {
-      font-size: 60px;
-      font-weight: 700;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+    .slider-btn:hover {
+      background: #2ac46c;
     }
 
-    /* LOADER */
+
+    .slider-btn.prev {
+      left: 25px;
+    }
+
+
+    .slider-btn.next {
+      right: 25px;
+    }
+
+
+    /* =========================================
+   LOADER
+========================================= */
+
     .slider-loader {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 55% 55% at 85% 35%,
-          rgba(25, 135, 84, 0.30) 0%,
-          transparent 65%),
-        radial-gradient(ellipse 40% 50% at 10% 85%,
-          rgba(25, 135, 84, 0.30) 0%,
-          transparent 65%),
-        #198754;
-      z-index: 20;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #063b2d;
+      z-index: 999;
+      transition: opacity 0.5s ease;
     }
 
-    .slider-loader.hide {
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.5s;
-    }
 
     .loader {
-      width: 55px;
-      height: 55px;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      border-top-color: white;
+      width: 42px;
+      height: 42px;
+
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+
+      border:
+        3px solid rgba(255, 255, 255, 0.15);
+
+      border-top-color: #2ac46c;
+
+      animation: heroSpin 0.8s linear infinite;
+    }
+
+
+    @keyframes heroSpin {
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    /* =========================================
+   TABLET
+========================================= */
+
+    @media (max-width: 991px) {
+
+      .hero-slider {
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding: 70px 0;
+      }
+
+
+      .hero-content,
+      .hero-banner {
+        width: 100%;
+      }
+
+
+      .hero-content {
+        justify-content: center;
+
+        text-align: center;
+      }
+
+
+      .hero-content-inner {
+        width: 88%;
+
+        margin: 0 auto;
+      }
+
+
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .hero-badges {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .hero-search {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .hero-banner {
+        padding: 50px 6% 0;
+      }
+
+    }
+
+
+    /* =========================================
+   MOBILE
+========================================= */
+
+    @media (max-width: 576px) {
+
+      .hero-slider {
+        padding: 55px 0;
+      }
+
+
+      .hero-content h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+      }
+
+
+      .hero-content p {
+        font-size: 15px;
+      }
+
+
+      .hero-badges {
+        max-width: 100%;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+      }
+
+
+      .hero-badges span {
+        padding: 9px 13px;
+
+        font-size: 10px;
+      }
+
+
+      .hero-search {
+        height: auto;
+
+        min-height: 56px;
+      }
+
+
+      .hero-search input {
+        min-width: 0;
+
+        font-size: 12px;
+      }
+
+
+      .hero-search button {
+        padding: 0 17px;
+
+        font-size: 12px;
+      }
+
+
+      .slider-card {
+        height: 320px;
+
+        padding: 10px;
+
+        border-radius: 18px;
+      }
+
+
+      .slides {
+        border-radius: 12px;
+      }
+
     }
 
     @keyframes spin {
